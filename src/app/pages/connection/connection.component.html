@@ -1,0 +1,30 @@
+
+
+
+<div class="keypair-connection">
+  <h2>Connecting to a wallet!</h2>
+  <h3>First, we can generate new keypair just by clicking this button.</h3>
+  <button (click)="generateKeypair()">Generate new keypair!</button>
+  <div>Your public key: {{ pubKey }}</div>
+  <div>Keypair: {{ keypair }}</div>
+  <div>SecretKey: {{ secretKey }}</div>
+
+  <h3>
+    Second, we can generate new keypair by adding our secret word to be part of
+    new key!
+  </h3>
+  <label>Enter your secret word:</label>
+  <input />
+  <button (click)="generateKeypairWithSecret()">
+    Generate new keypair with secret!
+  </button>
+  <div>Your keypair:{{ withSecret }}</div>
+
+  <p>
+    General recommendation is to use wallet to sign transactions not keypair,
+    even if most wallets today allow users to bring keypair
+  </p> 
+</div>
+
+<app-wallets class="app-wallet"></app-wallets>
+

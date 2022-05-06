@@ -1,0 +1,85 @@
+<div>
+  <div class="select-network">
+  <h3>
+    To send Transaction we first need to establish connection with cluster, we
+    can connect to:
+  </h3>
+  <div><button (click)="selectNetwork('devnet')">devnet</button></div>
+  <div><button (click)="selectNetwork('testnet')">localnet</button></div>
+  <div><button (click)="selectNetwork('mainnet-beta')">mainnet</button></div>
+
+  {{ selectedNetwork }}
+  
+  <!-- 
+      uncomment if needed
+    this.connection = new Connection(clusterApiUrl('devnet'), 'confirmed');
+    console.log("Connection established:",  this.connection)
+-->
+
+  <!-- 
+Airdrop section
+      -->
+
+    </div>
+  <app-airdrop class="airdrop"></app-airdrop>
+
+<div class="create-transaction">
+  <h3>Now we can create transaction:</h3>
+  <h4>Auto generated keypairs:</h4>
+  <p>
+    Keypair one: {{ keypairOne.publicKey.toString() }}
+    <button (click)="activateAirdrop(1)">Airdrop 1000000000LAMP</button>
+  </p>
+  <p>
+    Keypair two: {{ keypairTwo.publicKey.toString()
+    }}<button (click)="activateAirdrop(2)">Airdrop 1000000000LAMP</button>
+  </p>
+  <form
+    (ngSubmit)="onSubmitTransaction(transactionForm)"
+    #transactionForm="ngForm"
+  >
+    <label>Enter your address</label>
+    <input name="sender" ngModel />
+    {{ transactionSender }}
+    <br />
+    <label>Enter addres to which you are sending sol:</label>
+    <input name="receiver" ngModel />
+    {{ transactionReceiver }}
+    <br />
+    <label>Enter the number of lamports you are sending</label>
+    <input name="amount" ngModel />
+    {{ transactionAmount }}
+    <br />
+    <label>Secret key from keypair generated to sign transaction.</label>
+    <br />
+    <button type="submit">Submit Transaction</button>
+  </form>
+
+  <br />
+  <!-- 
+  this.transactionResponse = await this.transaction.add(
+    SystemProgram.transfer({
+      fromPubkey: this.keypairOne.publicKey,
+      toPubkey: this.keypairTwo.publicKey,
+      lamports: 1000
+    }) 
+  );
+-->
+  <div>Transaction response:</div>
+</div>
+<div class="custom-section">
+  <h3>Add section, airdrop and transactions with wallet!</h3>
+</div>
+  <!--
+  console.log("Sending transaction(transaction Response)...:", this.transactionResponse)
+  
+    this.response =  await sendAndConfirmTransaction(
+        this.connection,
+        this.transaction,
+        [this.keypairOne]
+      );
+-->
+
+  <!-- 
+      console.log("from (send and confirm transaction) response:", this.response)
+--></div>

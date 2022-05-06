@@ -1,0 +1,20 @@
+.select-network {
+    background-color: rgb(235, 84, 188);
+    border-radius: 0.75rem;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.create-transaction{
+    background-color: rgb(255, 117, 74);
+    border-radius: 0.75rem;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.custom-section{
+    background-color: #14f195;
+    border-radius: 0.75rem;
+    padding: 10px;
+    margin-bottom: 10px;
+}

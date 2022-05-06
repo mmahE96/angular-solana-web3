@@ -1,0 +1,30 @@
+<div class="airdrop">
+<h3>
+  When connectin is established we can airdrop sols/lamports to our account:
+</h3>
+
+<form (ngSubmit)="onSubmitAirdrop(airdropForm)" #airdropForm="ngForm">
+  <label>Enter the publicKey of an accout to airdrop funds:</label>
+  <input name="publicKey" ngModel />
+  {{ airdropPublic }}
+  <br />
+  <label>Enter amount of lamports to airdrop:</label>
+  {{ airdropAmount }}
+  <input name="amount" ngModel />
+  <button type="submit">Submit Airdrop</button>
+</form>
+<br />
+
+<!-- 
+    this.airdropSignature = await this.connection.requestAirdrop(
+        form.form.value.publicKey,
+         LAMPORTS_PER_SOL,
+      );
+      -->
+<div>Confirmation of an airdrop:</div>
+</div>
+<!-- 
+      this.confirmation = await this. connection.confirmTransaction(this.airdropSignature);
+  console.log("Confirming airdrop:", this.confirmation)
+
+-->
