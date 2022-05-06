@@ -5,15 +5,16 @@
 
 <form (ngSubmit)="onSubmitAirdrop(airdropForm)" #airdropForm="ngForm">
   <label>Enter the publicKey of an accout to airdrop funds:</label>
-  <input name="publicKey" ngModel />
+  <input class="inpt" name="publicKey" ngModel />
   {{ airdropPublic }}
   <br />
   <label>Enter amount of lamports to airdrop:</label>
   {{ airdropAmount }}
-  <input name="amount" ngModel />
-  <button type="submit">Submit Airdrop</button>
+  <input class="inpt" name="amount" ngModel />
+  <br />
+  <button class="btn" type="submit">Submit Airdrop</button>
 </form>
-<br />
+
 
 <!-- 
     this.airdropSignature = await this.connection.requestAirdrop(

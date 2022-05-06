@@ -4,9 +4,9 @@
     To send Transaction we first need to establish connection with cluster, we
     can connect to:
   </h3>
-  <div><button (click)="selectNetwork('devnet')">devnet</button></div>
-  <div><button (click)="selectNetwork('testnet')">localnet</button></div>
-  <div><button (click)="selectNetwork('mainnet-beta')">mainnet</button></div>
+  <div><button class="btn" (click)="selectNetwork('devnet')">devnet</button></div>
+  <div><button class="btn" (click)="selectNetwork('testnet')">localnet</button></div>
+  <div><button class="btn" (click)="selectNetwork('mainnet-beta')">mainnet</button></div>
 
   {{ selectedNetwork }}
   
@@ -28,31 +28,31 @@ Airdrop section
   <h4>Auto generated keypairs:</h4>
   <p>
     Keypair one: {{ keypairOne.publicKey.toString() }}
-    <button (click)="activateAirdrop(1)">Airdrop 1000000000LAMP</button>
+    <button class="btn" (click)="activateAirdrop(1)">Airdrop 1000000000LAMP</button>
   </p>
   <p>
     Keypair two: {{ keypairTwo.publicKey.toString()
-    }}<button (click)="activateAirdrop(2)">Airdrop 1000000000LAMP</button>
+    }}<button class="btn" (click)="activateAirdrop(2)">Airdrop 1000000000LAMP</button>
   </p>
   <form
     (ngSubmit)="onSubmitTransaction(transactionForm)"
     #transactionForm="ngForm"
   >
-    <label>Enter your address</label>
-    <input name="sender" ngModel />
+    <label>Enter your address:</label>
+    <input class="inpt" name="sender" ngModel />
     {{ transactionSender }}
     <br />
     <label>Enter addres to which you are sending sol:</label>
-    <input name="receiver" ngModel />
+    <input class="inpt" name="receiver" ngModel />
     {{ transactionReceiver }}
     <br />
-    <label>Enter the number of lamports you are sending</label>
-    <input name="amount" ngModel />
+    <label>Enter the number of lamports you are sending:</label>
+    <input class="inpt" name="amount" ngModel />
     {{ transactionAmount }}
     <br />
     <label>Secret key from keypair generated to sign transaction.</label>
     <br />
-    <button type="submit">Submit Transaction</button>
+    <button class="btn" type="submit">Submit Transaction</button>
   </form>
 
   <br />

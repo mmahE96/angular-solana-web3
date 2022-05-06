@@ -4,7 +4,7 @@
 <div class="keypair-connection">
   <h2>Connecting to a wallet!</h2>
   <h3>First, we can generate new keypair just by clicking this button.</h3>
-  <button (click)="generateKeypair()">Generate new keypair!</button>
+  <button class="btn" (click)="generateKeypair()">Generate new keypair!</button>
   <div>Your public key: {{ pubKey }}</div>
   <div>Keypair: {{ keypair }}</div>
   <div>SecretKey: {{ secretKey }}</div>
@@ -14,8 +14,8 @@
     new key!
   </h3>
   <label>Enter your secret word:</label>
-  <input />
-  <button (click)="generateKeypairWithSecret()">
+  <input class="inpt" />
+  <button class="btn" (click)="generateKeypairWithSecret()">
     Generate new keypair with secret!
   </button>
   <div>Your keypair:{{ withSecret }}</div>

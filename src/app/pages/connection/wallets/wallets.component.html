@@ -24,14 +24,14 @@
         <ng-container *ngIf="ready$ | async">(READY)</ng-container>
       </p>
       <p>Wallet Key: {{ publicKey$ | async }}</p>
-      <button
+      <button class="btn"
         (click)="onConnect()"
         *ngIf="(connected$ | async) === false && (walletName$ | async) !== null"
         [disabled]="(ready$ | async) === false"
       >
         Connect
       </button>
-      <button (click)="onDisconnect()" *ngIf="connected$ | async">
+      <button class="btn" (click)="onDisconnect()" *ngIf="connected$ | async">
         Disconnect
       </button>
     </section>
@@ -41,20 +41,20 @@
 
       <div>
         <label>Recipient</label>
-        <input type="text" [(ngModel)]="recipient" />
+        <input class="inpt" type="text" [(ngModel)]="recipient" />
       </div>
 
       <div>
         <label>Lamports</label>
-        <input type="number" [(ngModel)]="lamports" />
+        <input class="inpt" type="number" [(ngModel)]="lamports" />
       </div>
 
-      <button (click)="onSendTransaction(publicKey)">Send Transaction</button>
-      <button (click)="onSignTransaction(publicKey)">Sign Transaction</button>
-      <button (click)="onSignAllTransactions(publicKey)">
+      <button class="btn" (click)="onSendTransaction(publicKey)">Send Transaction</button>
+      <button class="btn" (click)="onSignTransaction(publicKey)">Sign Transaction</button>
+      <button class="btn" (click)="onSignAllTransactions(publicKey)">
         Sign All Transactions
       </button>
-      <button (click)="onSignMessage()">Sign Message</button>
+      <button class="btn" (click)="onSignMessage()">Sign Message</button>
     </section>
   </main>
 </div>
