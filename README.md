@@ -9,15 +9,13 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ### CONNECTING WALLET AND NETWORK OPTIONS
 
-<img width="1440" alt="Screenshot 2022-12-06 at 11 43 41" src="https://github.com/mmahE96/angular-solana-web3/assets/76560529/73abc4c4-f97d-4c6c-b827-795eb76ec6bc">
 
 ### AIRDROP AND TRANSACTIONS
 
-<img width="1440" alt="Screenshot 2022-12-06 at 11 44 23" src="https://github.com/mmahE96/angular-solana-web3/assets/76560529/9df9f7a8-a235-46e9-a3dc-ddc4d5bf5dbc">
+
 
 ### EXPLORING CHAIN
 
-<img width="1440" alt="Screenshot 2022-12-06 at 11 44 31" src="https://github.com/mmahE96/angular-solana-web3/assets/76560529/8ae1c88f-6535-4b43-9f59-9c7d2ec4064c">
 
 
 
